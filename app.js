@@ -123,6 +123,11 @@ console.log("Mexican Foods: ", mexicanFood);
 
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
+dishes
+const vegetarianCuisine = dishes.filter(vegeDishes =>{
+  return vegeDishes.cuisine.includes("Vegetarian")
+});
+
 
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
