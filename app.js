@@ -123,26 +123,44 @@ console.log("Mexican Foods: ", mexicanFood);
 
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
-dishes
-const vegetarianCuisine = dishes.filter(vegeDishes =>{
-  return vegeDishes.cuisine.includes("Vegetarian")
-});
-
+const vegetarianDishes = dishes.filter(vegeDishe => vegeDishe.cuisine.includes("Vegetarian"));
+console.log("Vegetarian Dishes: ", vegetarianDishes)
 
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
 
+const italianDishes = dishes.filter(italianFoods => (
+  italianFoods.cuisine.includes("Italian") && italianFoods.servings > 5
+))
+console.log("Italian Dishes That Server more than 5", italianDishes);
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
+const idEqualServingCount = dishes.filter (dish =>{
+  results = dish.id === dish.servings;
+  return results;
+})
+
 
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
+const evenServings = dishes.filter(isEven => {
+  results1 = isEven.servings % 2 === 0;
+  return results1;
+})
+
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
+const caprese = dishes.filter(tommatoAndCheese => {
+ dishContains =  tommatoAndCheese.ingredients.includes("tomato") &&
+tommatoAndCheese.ingredients.includes("cheese");
+return dishContains;
+})
+
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
+const cuisineType = dishes.filter(type => type.cuisine)
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
